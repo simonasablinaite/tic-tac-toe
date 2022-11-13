@@ -11,7 +11,23 @@
 
 body {
    margin: 0;
-   background-color: rgb(116, 204, 204);
+   background-color: rgb(97, 157, 160);
+}
+
+.title {
+   text-transform: uppercase;
+   color: white;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 50px;
+   font-weight: 100;
+   justify-content: center;
+   text-align: center;
+}
+
+hr {
+   border: none;
+   border-top: 3px dotted rgb(221, 184, 138);
+   width: 35%;
 }
 
 .board {
@@ -29,7 +45,7 @@ body {
    position: relative;
    width: var(--cell-size);
    height: var(--cell-size);
-   background-color: rgb(202, 202, 202);
+   background-color: rgb(97, 157, 160);
    border: 1px solid black;
    display: flex;
    justify-content: center;
@@ -63,11 +79,13 @@ body {
 }
 
 .cell.x::before,
-.cell.x::after,
-.cell.circle::before {
-   background-color: black;
+.cell.x::after {
+   background-color: white;
 }
 
+.cell.circle::before {
+   background-color: rgb(13, 97, 100);
+}
 
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
@@ -117,5 +135,21 @@ body {
    position: absolute;
    width: calc(var(--mark-size) * .7);
    height: calc(var(--mark-size) * .7);
-   background-color: rgb(202, 202, 202);
+   background-color: rgb(97, 157, 160);
 }
+
+.winning-message {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, .8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 50px;
+}
+
+.winning-message button {}
