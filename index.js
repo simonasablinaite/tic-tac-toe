@@ -6,10 +6,16 @@ const board = document.getElementById("board");
 
 let circleTurn;
 
-cells.forEach((cell) => {
-  // paspaudimas tik viena karta ant to paties langelio:
-  cell.addEventListener("click", handleClick, { once: true });
-});
+startGame();
+
+function startGame() {
+  circleTurn = false;
+  cells.forEach((cell) => {
+    // paspaudimas tik viena karta ant to paties langelio:
+    cell.addEventListener("click", handleClick, { once: true });
+  });
+  setBoardHoverClass();
+}
 
 function handleClick(e) {
   const cell = e.target;

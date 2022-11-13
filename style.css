@@ -90,7 +90,7 @@ hr {
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-   background-color: lightgray;
+   background-color: rgba(207, 207, 207, 0.53);
 }
 
 .cell.x::before,
