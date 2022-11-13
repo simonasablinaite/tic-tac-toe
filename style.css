@@ -30,6 +30,25 @@ hr {
    width: 35%;
 }
 
+.scoresBoard {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   text-align: center;
+   color: white;
+   font-size: 60px;
+   margin-top: 15px;
+}
+
+.xScores,
+.circleScores {
+   margin: 15px;
+}
+
+.mark {
+   margin-top: 10px;
+}
+
 .board {
    width: 100vw;
    height: 100vh;

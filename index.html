@@ -14,6 +14,11 @@
 <body>
    <h1 class="title">Tic tac toe</h1>
    <hr>
+   <div class="scoresBoard">
+      <div class="xScores" id="xScores">0</div>
+      <div class="mark">:</div>
+      <div class="circleScores" id="circleScores">0</div>
+   </div>
    <div class="scores"></div>
    <div class="board" id="board">
       <div class="cell" data-cell></div>
@@ -26,6 +31,7 @@
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
    </div>
+
    <div class="winning-message" id="winningMessage">
       <div data-winning-message-text></div>
       <button id="restart">Restart</button>
