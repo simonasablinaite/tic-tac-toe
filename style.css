@@ -34,6 +34,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   cursor: pointer;
 }
 
 .cell:first-child,
@@ -56,6 +57,12 @@ body {
    border-bottom: none;
 }
 
+.cell.x,
+.cell.circle {
+   cursor: not-allowed;
+}
+
+
 .cell.x::before,
 .cell.x::after {
    content: '';
@@ -71,4 +78,25 @@ body {
 
 .cell.x::after {
    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+   content: '';
+   position: absolute;
+   border-radius: 50%;
+}
+
+.cell.circle::before {
+   width: var(--mark-size);
+   height: var(--mark-size);
+   background-color: black;
+}
+
+.cell.circle::after {
+   content: '';
+   position: absolute;
+   width: calc(var(--mark-size) * .7);
+   height: calc(var(--mark-size) * .7);
+   background-color: rgb(202, 202, 202);
 }
